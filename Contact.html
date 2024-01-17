@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آکادمی ‌جلوه</title>
+    <link rel="icon" type="image/png" href="./media/Logo/favicon.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./animate.css/animate.min.css" />
+    <link rel="stylesheet" href="./Web/css/all.min.css" />
+  </head>
+  <body>
+    <nav>
+      <div
+        class="burger-menu w-full h-[80px] flex items-center justify-evenly sticky top-0 bg-white shadow-md select-none lg:hidden z-[999] dark:bg-[#001321]"
+      >
+        <div
+          class="burger cursor-pointer w-[33%] flex justify-center items-center"
+          id="burger"
+        >
+          <i
+            class="fa-duotone fa-bars-staggered text-2xl text-[#A4A4A4] hover:text-[#1abac6] transition-all duration-200 ease-linear"
+          ></i>
+        </div>
+        <div class="burger-logo w-[33%] flex justify-center items-center">
+          <a href="./index.html"
+            ><img
+              src="./media/Logo/Artboard 4.png"
+              class="w-[110px] pt-2 object-contain"
+          /></a>
+        </div>
+        <div
+          class="burger-login cursor-pointer w-[33%] flex justify-center items-center gap-2"
+        >
+          <button
+            id="theme-toggle"
+            type="button"
+            class="text-gray-500 dark:text-gray-400 hover:text-[#EEF296] dark:hover:text-[#F4CE14] text-lg ml-2 transition-all duration-100 ease-linear"
+          >
+            <svg
+              id="theme-toggle-dark-icon"
+              class="hidden w-7 h-7"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+            <svg
+              id="theme-toggle-light-icon"
+              class="hidden w-8 h-8"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+
+          <span
+            id="mobile-signup"
+            class="fa-duotone fa-user-vneck text-2xl text-[#A4A4A4] hover:text-[#1abac6] transition-all duration-200 ease-linear"
+          ></span>
+        </div>
+      </div>
+      <div
+        class="side w-[80%] h-full bg-white dark:bg-[#001321] fixed top-0 z-[999] shadow-md select-none font-MorabbaRegular overflow-auto hidden lg:hidden"
+      >
+        <div
+          class="content-side w-[85%] mx-auto h-full flex flex-col justify-start items-center"
+        >
+          <img
+            src="./media/Logo/Artboard 7.png"
+            class="w-[180px] mt-3 object-contain"
+          />
+          <div class="w-[80%] h-[0.5px] bg-[#d1d1d1] mt-3"></div>
+          <div
+            class="search w-full h-[55px] bg-[#F6F5F5] dark:bg-[#232D3F] rounded-full flex items-center pr-2 my-4"
+          >
+            <div
+              class="circle w-[35px] h-[30px] bg-white dark:bg-[#001321] rounded-full flex items-center justify-center"
+            >
+              <span
+                id="mg"
+                class="fa-solid fa-magnifying-glass text-[#A4A4A4]"
+              ></span>
+            </div>
+            <input
+              type="text"
+              class="rounded-full w-full h-full text-xs pr-2 text-[#9CA3AF] bg-[#F6F5F5] dark:bg-[#232D3F] outline-none"
+              placeholder="جستجو..."
+              id="input"
+            />
+          </div>
+          <div class="w-full h-full">
+            <ul
+              id="ul-open"
+              class="w-[90%] flex flex-col items-start gap-6 mt-5 font-MorabbaRegular p-3 absolute"
+            >
+              <li
+                class="border-b-[1px] border-gray-400 w-full pb-[5px] hover:border-regal-blue transition-all duration-200 ease-linear"
+              >
+                <a
+                  href="./index.html"
+                  class="hover:text-[#1abac6] transition-all duration-200 ease-linear dark:text-white dark:hover:text-[#1abac6]"
+                  >خانه</a
+                >
+              </li>
+              <li
+                id="li-open"
+                class="border-b-[1px] border-gray-400 w-full pb-[5px] hover:border-regal-blue transition-all duration-200 ease-linear"
+              >
+                <a
+                  id="a-open"
+                  href="./Courses.html"
+                  class="hover:text-[#1abac6] transition-all duration-200 ease-linear flex items-center gap-1 dark:text-white dark:hover:text-[#1abac6]"
+                >
+                  دوره‌ها
+                  <span
+                    id="arrow-mobile"
+                    class="fa-regular fa-angle-down"
+                  ></span>
+                </a>
+                <div id="sub" class="w-full h-full hidden">
+                  <div
+                    class="w-full flex flex-col mt-6 pr-4 text-[14px] gap-2 text-[#000018] mb-2"
+                  >
+                    <ul class="w-[90%] flex flex-col gap-[10px] text-[14px]">
+                      <h1
+                        class="text-gray-500 text-[16px] mb-3 hover:text-[#1abac6] transition-all duration-200 ease-linear cursor-pointer flex items-center justify-start gap-1 font-MorabbaBold dark:text-slate-300"
+                      >
+                        فرانت‌اند
+                        <span class="fa-solid fa-angle-left text-sm"></span>
+                      </h1>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#"
+                          >آموزش <span class="font-poppins">HTML</span></a
+                        >
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#"
+                          >آموزش <span class="font-poppins">CSS</span></a
+                        >
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#"
+                          >آموزش <span class="font-poppins">FlexBox</span></a
+                        >
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#"
+                          >آموزش <span class="font-poppins">CSS Grid</span></a
+                        >
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#"
+                          >آموزش
+                          <span class="font-poppins">Tailwind CSS</span></a
+                        >
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#">آموزش طراحی قالب</a>
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#">آموزش بوت استرپ</a>
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#">آموزش جاوا‌اسکریپت</a>
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#"
+                          >آموزش ری‌اکت
+                          <span class="font-poppins">ReactJS</span></a
+                        >
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#">آموزش ویو جی‌اس</a>
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#"
+                          >آموزش وی‌اس‌کد
+                          <span class="font-poppins">Vscode</span></a
+                        >
+                      </li>
+                      <li
+                        class="w-full hover:text-[#1abac6] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                      >
+                        <a href="#"
+                          >آموزش <span class="font-poppins">NodeJS</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="border-b-[1px] border-gray-400 w-full pb-[5px] hover:border-regal-blue transition-all duration-200 ease-linear"
+              >
+                <a
+                  href="./Blog.html"
+                  class="hover:text-[#1abac6] transition-all duration-200 ease-linear dark:text-white dark:hover:text-[#1abac6]"
+                  >مقالات</a
+                >
+              </li>
+
+              <li
+                class="border-b-[1px] border-gray-400 w-full pb-[5px] hover:border-regal-blue transition-all duration-200 ease-linear"
+              >
+                <a
+                  href="./Contact.html"
+                  class="hover:text-[#1abac6] transition-all duration-200 ease-linear hover:border-regal-blue dark:text-white dark:hover:text-[#1abac6]"
+                  >تماس‌با‌ما</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-[#1abac6] transition-all duration-200 ease-linear dark:text-white dark:hover:text-[#1abac6]"
+                  >پرسش‌های‌متداول</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="close absolute top-[12px] left-[12px] flex items-center justify-center rounded-full hover:text-[#1abac6] hover:scale-[1.3] transition-all duration-300 cursor-pointer dark:text-white dark:hover:text-[#1abac6] dark:hover:scale-[1.3]"
+          >
+            <i class="fa-solid fa-xmark text-[16px]"></i>
+          </div>
+          <!-- CS -->
+        </div>
+      </div>
+    </nav>
+    <!-- end mobile menu -->
+    <!-- desktop menu -->
+    <nav>
+      <div
+        class="menu-desktop hidden lg:flex items-center justify-between w-full h-[100px] gap-[40px] lg:gap-[30px] pt-3 pb-2 shadow-md font-MorabbaRegular sticky top-0 bg-white z-[999] select-none dark:bg-[#001321]"
+      >
+        <div class="logo flex items-center justify-center mr-[40px]">
+          <a href="./index.html"
+            ><img
+              id="menu-logo-desktop"
+              class="w-[190px] lg:w-[130px] object-contain"
+              src="./media/Logo/Artboard 4.png"
+          /></a>
+        </div>
+        <div class="w-[0.5px] h-[60px] bg-[#d1d1d1]"></div>
+        <div class="menu-text h-full flex items-center grow">
+          <ul class="flex items-center gap-[30px] text-lg dark:text-white">
+            <li
+              id="home"
+              class="flex flex-col items-center justify-center relative"
+            >
+              <a
+                href="./index.html"
+                class="hover:text-[#00A9FF] transition-all duration-200 ease-linear"
+                >خانه</a
+              >
+              <div id="line1" class="w-full hidden"></div>
+            </li>
+            <li
+              id="doreh"
+              class="flex flex-col items-center justify-center relative select-none"
+            >
+              <a
+                href="./Courses.html"
+                class="hover:text-[#00A9FF] transition-all duration-200 ease-linear flex items-center gap-1"
+                >دوره‌ها
+                <span class="fa-regular fa-angle-down scale-90"></span>
+              </a>
+              <div id="line2" class="w-full hidden"></div>
+              <div
+                id="submenu"
+                class="submenu w-[300px] absolute top-[35px] right-[5px] shadow-md bg-[#F6F5F5] z-[999] rounded-2xl py-6 hidden dark:bg-[#232D3F]"
+              >
+                <div
+                  class="w-full h-full flex flex-col items-start justify-center pr-8"
+                >
+                  <h1
+                    class="font-MorabbaBold text-gray-500 text-xl mb-5 hover:text-[#00A9FF] transition-all duration-200 ease-linear w-[90%] flex items-center justify-between cursor-pointer dark:text-slate-50"
+                  >
+                    فرانت‌اند
+                    <span class="fa-solid fa-angle-down"></span>
+                  </h1>
+                  <ul class="w-[90%] flex flex-col gap-[10px] text-[16px]">
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#"
+                        >آموزش <span class="font-poppins">HTML</span></a
+                      >
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#"
+                        >آموزش <span class="font-poppins">CSS</span></a
+                      >
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#"
+                        >آموزش <span class="font-poppins">FlexBox</span></a
+                      >
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#"
+                        >آموزش <span class="font-poppins">CSS Grid</span></a
+                      >
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#"
+                        >آموزش <span class="font-poppins">Tailwind CSS</span></a
+                      >
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#">آموزش طراحی قالب</a>
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#">آموزش بوت استرپ</a>
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#">آموزش جاوا‌اسکریپت</a>
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#"
+                        >آموزش ری‌اکت
+                        <span class="font-poppins">ReactJS</span></a
+                      >
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#">آموزش ویو جی‌اس</a>
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear border-b-[0.5px] border-gray-200 pb-1 hover:border-regal-blue"
+                    >
+                      <a href="#"
+                        >آموزش وی‌اس‌کد
+                        <span class="font-poppins">Vscode</span></a
+                      >
+                    </li>
+                    <li
+                      class="w-full hover:text-[#00A9FF] transition-all duration-200 ease-linear"
+                    >
+                      <a href="#"
+                        >آموزش <span class="font-poppins">NPM</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              id="blog"
+              class="flex flex-col items-center justify-center relative"
+            >
+              <a
+                href="./Blog.html"
+                class="hover:text-[#00A9FF] transition-all duration-200 ease-linear"
+                >مقالات</a
+              >
+              <div id="line3" class="w-full hidden"></div>
+            </li>
+            <li
+              id="tms"
+              class="flex flex-col items-center justify-center relative"
+            >
+              <a
+                href="./Contact.html"
+                class="hover:text-[#00A9FF] transition-all duration-200 ease-linear"
+                >تماس‌با‌ما</a
+              >
+              <div id="line4" class="w-full hidden"></div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="user-intraction flex items-center h-full gap-[20px] pl-[50px]"
+        >
+          <button
+            id="theme-toggle-desktop"
+            type="button"
+            class="text-gray-500 dark:text-gray-400 hover:text-[#384d73] dark:hover:text-[#F4CE14] text-lg ml-2 transition-all duration-100 ease-linear"
+          >
+            <svg
+              id="theme-toggle-dark-icon-desktop"
+              class="hidden w-7 h-7"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+            <svg
+              id="theme-toggle-light-icon-desktop"
+              class="hidden w-8 h-8"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="a-signup" class="signup-login flex items-center gap-[50px]">
+            <a
+              href="#"
+              class="text-sm transition-all duration-200 ease-linear hover:text-[#00A9FF]"
+            >
+              <span
+                class="fa-duotone fa-user-vneck text-[#A4A4A4] hover:text-[#00A9FF] scale-[1.6] transition-all duration-200 ease-linear"
+              ></span>
+            </a>
+          </div>
+          <div class="w-[0.5px] h-[60px] bg-[#d1d1d1]"></div>
+          <div
+            class="search h-[45px] bg-[#F6F5F5] rounded-full flex items-center pr-2 dark:bg-[#232D3F]"
+          >
+            <div
+              id="magG"
+              class="circle w-[30px] h-[30px] bg-white rounded-full flex items-center justify-center dark:bg-[#001321]"
+            >
+              <i
+                id="mg-desktop"
+                class="fa-solid fa-magnifying-glass text-[#A4A4A4]"
+              ></i>
+            </div>
+            <input
+              type="text"
+              class="transition-all duration-[300ms] ease-linear rounded-full w-[100px] h-full text-xs pr-2 text-[#9CA3AF] bg-[#F6F5F5] outline-none dark:bg-[#232D3F]"
+              placeholder="جستجو..."
+              id="searchInput"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end destop menu -->
+    <!-- end menu -->
+    <!-- signup desktop -->
+    <div id="signup-مل" class="signup-مل z-[999]">
+      <div
+        class="signup lg:w-[800px] lg:h-[450px] xl:w-[900px] xl:h-[480px] shadow-2xl bg-[#F6F5F5] border-black rounded-2xl flex items-center justify-evenly font-MorabbaBold select-none relative dark:bg-[#001321]"
+      >
+        <div class="w-[58%] h-full flex flex-col items-center justify-center">
+          <p
+            id="p-sbt"
+            class="w-full h-[50px] mt-6 text-3xl transition-all duration-200 ease-linear flex flex-col items-center dark:text-white"
+          >
+            ثبت‌نام
+            <span
+              id="p-sign"
+              class="font-poppins text-xs w-full text-center mr-[45px] mt-[-3px] dark:text-white"
+              >signup</span
+            >
+          </p>
+          <div class="w-full h-full flex items-center justify-center">
+            <div
+              class="w-[20%] h-full flex flex-col items-start pr-6 justify-evenly"
+            >
+              <p
+                class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center dark:text-white"
+              >
+                نام‌کامل
+                <span
+                  id="span-name"
+                  class="text-xs font-poppins dark:text-white"
+                  >name/lastname</span
+                >
+              </p>
+              <p
+                class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center dark:text-white"
+              >
+                ایمیل
+                <span
+                  id="span-email"
+                  class="text-xs font-poppins dark:text-white"
+                  >email</span
+                >
+              </p>
+              <p
+                class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center dark:text-white"
+              >
+                شماره‌همراه
+                <span
+                  id="span-phone"
+                  class="text-xs font-poppins dark:text-white"
+                  >phonenumber</span
+                >
+              </p>
+              <p
+                class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center dark:text-white"
+              >
+                پسورد
+                <span
+                  id="span-pass"
+                  class="text-xs font-poppins dark:text-white"
+                  >password</span
+                >
+              </p>
+            </div>
+            <div
+              class="w-[70%] h-full flex flex-col items-center justify-evenly"
+            >
+              <input
+                id="input-name"
+                class="signupInput dark:bg-[#232D3F] dark:text-white"
+                type="text"
+                required
+                placeholder="علیرضا خمسه"
+              />
+              <input
+                id="input-email"
+                class="signupInputEmail font-poppins dark:bg-[#232D3F] dark:text-white"
+                type="email"
+                required
+                placeholder="example@gmail.com"
+              />
+              <input
+                id="input-phone"
+                class="signupInputTel dark:bg-[#232D3F] dark:text-white"
+                type="text"
+                required
+                placeholder="******* 0912"
+              />
+              <input
+                id="input-pass"
+                class="signupInput dark:bg-[#232D3F] dark:text-white"
+                type="password"
+                required
+              />
+            </div>
+          </div>
+          <div
+            class="w-full h-[70px] flex items-center justify-center gap-5 mb-4"
+          >
+            <button
+              id="btn-sign"
+              class="w-[130px] h-[40px] bg-[#1abac6] text-white rounded-lg hover:w-[150px] text-center hover:bg-[#164863] transition-all duration-300 ease-linear dark:bg-[#164863] dark:hover:bg-[#1abac6]"
+            >
+              ثبت‌نام
+            </button>
+            <button
+              id="btn-login"
+              class="w-[130px] h-[40px] bg-[#1abac6] text-white rounded-lg hover:w-[150px] text-center hover:bg-[#164863] transition-all duration-300 ease-linear dark:bg-[#164863] dark:hover:bg-[#1abac6]"
+            >
+              ورود
+            </button>
+          </div>
+        </div>
+        <div class="w-[1px] h-[70%] bg-[#9CA3AF]"></div>
+        <div class="w-[48%] h-full flex items-center justify-center">
+          <img
+            id="signup-logo-desktop"
+            src="./media/Logo/Artboard 4.png"
+            class="w-[500px] object-contain"
+          />
+        </div>
+        <div
+          id="close-signup"
+          class="close-sign absolute top-4 left-5 w-[25px] h-[25px] flex items-center justify-center text-sm rounded-full hover:text-[#1abac6] hover:scale-[1.3] transition-all duration-300 cursor-pointer dark:text-slate-100 dark:hover:text-[#1abac6]"
+        >
+          <i class="fa-solid fa-xmark scale-125"></i>
+        </div>
+      </div>
+    </div>
+    <!-- end signup desktop -->
+    <!-- signup mobile -->
+    <div
+      id="signup-مل-mobile"
+      class="signup-مل-mobile h-full w-full hidden lg:hidden relative z-[999]"
+    >
+      <div
+        class="signup-mobile w-[80%] shadow-2xl bg-[#F6F5F5] border-black rounded-2xl flex items-center justify-evenly font-MorabbaBold select-none relative dark:bg-[#001321]"
+      >
+        <div class="w-full h-full flex flex-col items-center justify-center">
+          <p
+            id="mobile-sbt"
+            class="w-full h-[50px] text-xl transition-all duration-200 ease-linear flex flex-col items-center mt-5 mb-5 dark:text-white"
+          >
+            ثبت‌نام
+            <span
+              id="mobile-sign"
+              class="font-poppins text-xs w-full text-center mr-[30px] mt-[-2px] dark:text-white"
+              >Signup</span
+            >
+          </p>
+          <div
+            class="w-full h-[75%] flex flex-col items-center justify-center gap-[5px]"
+          >
+            <p
+              class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center text-sm dark:text-white"
+            >
+              نام‌کامل
+              <span
+                id="span-name-m"
+                class="text-xs font-poppins dark:text-white"
+                >name/lastname</span
+              >
+            </p>
+            <input
+              id="input-name-m"
+              class="signupInputName-mobile dark:text-white dark:bg-[#232D3F]"
+              type="text"
+              required
+              placeholder="عرفان قانع"
+            />
+            <p
+              class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center mt-[10px] text-sm dark:text-white"
+            >
+              ایمیل
+              <span
+                id="span-email-m"
+                class="text-xs font-poppins dark:text-white"
+                >email</span
+              >
+            </p>
+            <input
+              id="input-email-m"
+              class="signupInputEmail-mobile font-poppins dark:text-white dark:bg-[#232D3F]"
+              type="email"
+              required
+              placeholder="example@gmail.com"
+            />
+            <p
+              class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center mt-[10px] text-sm dark:text-white"
+            >
+              شماره‌همراه
+              <span id="span-phone-m" class="text-xs font-poppins"
+                >phonenumber</span
+              >
+            </p>
+            <input
+              id="input-phone-m"
+              class="signupInputTel-mobile dark:text-white dark:bg-[#232D3F]"
+              type="text"
+              required
+              placeholder="******* 0912"
+            />
+            <p
+              class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center mt-[10px] text-sm dark:text-white"
+            >
+              پسورد
+              <span id="span-pass-m" class="text-xs font-poppins"
+                >password</span
+              >
+            </p>
+            <input
+              id="input-pass-m"
+              class="signupInput dark:text-white dark:bg-[#232D3F]"
+              type="password"
+              required
+            />
+          </div>
+          <div
+            class="w-full h-[70px] flex items-center justify-center gap-5 mt-2"
+          >
+            <button
+              id="btn-sign-m"
+              class="w-[100px] h-[40px] bg-[#164863] text-white rounded-lg text-center hover:bg-[#1abac6] transition-all duration-300 ease-linear text-sm"
+            >
+              ثبت‌نام
+            </button>
+            <button
+              id="btn-login-m"
+              class="w-[100px] h-[40px] bg-[#164863] text-white rounded-lg text-center hover:bg-[#1abac6] transition-all duration-300 ease-linear text-sm"
+            >
+              ورود
+            </button>
+          </div>
+        </div>
+        <div
+          id="close-signup-m"
+          class="close-sign-mobile absolute top-3 left-3 w-[25px] h-[25px] flex items-center justify-center text-sm rounded-full hover:text-[#1abac6] hover:scale-[1.3] transition-all duration-100 cursor-pointer dark:text-white dark:hover:text-[#1abac6]"
+        >
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </div>
+      </div>
+    </div>
+    <!-- end signup mobile -->
+    <!-- login desktop -->
+    <div id="login-مل" class="login-مل z-[999] hidden">
+      <div
+        class="login lg:w-[800px] lg:h-[450px] xl:w-[900px] xl:h-[480px] shadow-2xl bg-[#F6F5F5] border-black rounded-2xl flex items-center justify-evenly font-MorabbaBold select-none relative dark:!bg-[#001321]"
+      >
+        <div
+          class="w-[58%] h-full flex flex-col items-center justify-center relative"
+        >
+          <p
+            id="p-vorod"
+            class="w-full h-[50px] mt-6 text-3xl transition-all duration-200 ease-linear flex flex-col items-center dark:text-white"
+          >
+            ورود
+            <span
+              id="p-login"
+              class="font-poppins text-xs w-full text-center mr-[51px] mt-[-10px] dark:text-white"
+              >login</span
+            >
+          </p>
+          <div class="w-full h-3/5 flex items-center justify-center">
+            <div
+              class="w-[20%] h-3/6 flex flex-col items-start pr-6 justify-center gap-5"
+            >
+              <p
+                class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center dark:text-white"
+              >
+                ایمیل
+                <span
+                  id="span-email-login"
+                  class="text-xs font-poppins dark:text-white"
+                  >email</span
+                >
+              </p>
+              <p
+                class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center dark:text-white"
+              >
+                پسورد
+                <span
+                  id="span-pass-login"
+                  class="text-xs font-poppins dark:text-white"
+                  >password</span
+                >
+              </p>
+            </div>
+            <div
+              class="w-[70%] h-3/6 flex flex-col items-center justify-center gap-5"
+            >
+              <input
+                id="input-email-login"
+                class="signupInputEmail font-poppins dark:bg-[#232D3F] dark:text-white"
+                type="email"
+                required
+                placeholder="example@gmail.com"
+              />
+
+              <input
+                id="input-pass-login"
+                class="signupInput dark:bg-[#232D3F] dark:text-white"
+                type="password"
+                required
+              />
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-start justify-center gap-2 absolute bottom-[130px] right-[60px] dark:text-white"
+          >
+            <div
+              class="flex items-center justify-center gap-1 text-sm font-MorabbaRegular"
+            >
+              <input type="checkbox" name="remmemberMe" id="" />مرا به خاطر
+              بسپار
+            </div>
+
+            <a href="#" class="font-MorabbaRegular text-sm text-[#1abac6]"
+              >بازیابی رمز عبور</a
+            >
+          </div>
+          <div
+            class="w-full h-[70px] flex items-center justify-center gap-5 mb-8"
+          >
+            <button
+              id="btn-sign-v"
+              class="w-[130px] h-[40px] bg-[#1abac6] text-white rounded-lg hover:w-[150px] text-center hover:bg-[#164863] transition-all duration-300 ease-linear dark:bg-[#164863] dark:hover:bg-[#1abac6]"
+            >
+              ثبت‌نام
+            </button>
+            <button
+              id="btn-login-v"
+              class="w-[130px] h-[40px] bg-[#1abac6] text-white rounded-lg hover:w-[150px] text-center hover:bg-[#164863] transition-all duration-300 ease-linear dark:bg-[#164863] dark:hover:bg-[#1abac6]"
+            >
+              ورود
+            </button>
+          </div>
+        </div>
+        <div class="w-[1px] h-[70%] bg-[#9CA3AF]"></div>
+        <div class="w-[48%] h-full flex items-center justify-center">
+          <img
+            id="login-logo-desktop"
+            src="./media/Logo/Artboard 4.png"
+            class="w-[500px] object-contain"
+          />
+        </div>
+        <div
+          id="close-login"
+          class="close-sign absolute top-4 left-5 w-[25px] h-[25px] flex items-center justify-center text-sm rounded-full hover:text-[#1abac6] hover:scale-[1.3] transition-all duration-300 cursor-pointer dark:text-slate-100 dark:hover:text-[#1abac6]"
+        >
+          <i class="fa-solid fa-xmark scale-125"></i>
+        </div>
+      </div>
+    </div>
+    <!-- end login desktop -->
+    <!-- login mobile -->
+
+    <div
+      id="login-مل-mobile"
+      class="login-مل-mobile w-full h-full hidden lg:hidden relative z-[999]"
+    >
+      <div
+        class="login-mobile w-[80%] shadow-2xl bg-[#F6F5F5] border-black rounded-2xl flex items-center justify-evenly font-MorabbaBold select-none relative dark:bg-[#001321]"
+      >
+        <div class="w-full h-full flex flex-col items-center justify-center">
+          <p
+            id="mobile-vorod"
+            class="w-full h-[50px] text-xl transition-all duration-200 ease-linear flex flex-col items-center mt-5 mb-5 dark:text-white"
+          >
+            ورود
+            <span
+              id="mobile-login"
+              class="font-poppins text-xs w-full text-center mr-[50px] mt-[-10px]"
+              >login</span
+            >
+          </p>
+          <div
+            class="w-full h-[250px] flex flex-col items-center justify-start gap-[5px]"
+          >
+            <p
+              class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center mt-[10px] text-sm dark:text-white"
+            >
+              ایمیل
+              <span id="span-email-ML" class="text-xs font-poppins">email</span>
+            </p>
+            <input
+              id="input-email-ML"
+              class="signupInputEmail-mobile font-poppins dark:text-white dark:hover:text-[#1abac6] dark:bg-[#232D3F]"
+              type="email"
+              required
+              placeholder="example@gmail.com"
+            />
+
+            <p
+              class="h-[full] w-full transition-all duration-200 ease-linear flex flex-col items-center mt-[10px] text-sm dark:text-white"
+            >
+              پسورد
+              <span id="span-pass-ML" class="text-xs font-poppins"
+                >password</span
+              >
+            </p>
+            <input
+              id="input-pass-ML"
+              class="signupInput dark:text-white dark:hover:text-[#1abac6] dark:bg-[#232D3F]"
+              type="password"
+              required
+            />
+
+            <div
+              class="flex flex-col items-start justify-center gap-2 dark:text-white absolute bottom-[80px] right-[30px]"
+            >
+              <div
+                class="flex items-center justify-center gap-1 text-sm font-MorabbaRegular"
+              >
+                <input type="checkbox" name="remmemberMe" id="" />مرا به خاطر
+                بسپار
+              </div>
+
+              <a href="#" class="font-MorabbaRegular text-sm text-[#1abac6]"
+                >بازیابی رمز عبور</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="w-full h-[70px] flex items-center justify-center gap-5 mt-2"
+          >
+            <button
+              id="btn-sign-ML"
+              class="w-[100px] h-[40px] bg-[#164863] text-white rounded-lg text-center hover:bg-[#1abac6] transition-all duration-300 ease-linear text-sm"
+            >
+              ثبت‌نام
+            </button>
+            <button
+              id="btn-login-ML"
+              class="w-[100px] h-[40px] bg-[#164863] text-white rounded-lg text-center hover:bg-[#1abac6] transition-all duration-300 ease-linear text-sm"
+            >
+              ورود
+            </button>
+          </div>
+        </div>
+        <div
+          id="close-login-ML"
+          class="close-sign-mobile absolute top-2 left-2 w-[25px] h-[25px] flex items-center justify-center text-sm rounded-full hover:text-[#00A9FF] hover:scale-[1.3] transition-all duration-100 cursor-pointer dark:text-white dark:hover:text-[#1abac6]"
+        >
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </div>
+      </div>
+    </div>
+    <!-- end login mobile -->
+    <!-- CONTENT -->
+    <div
+      class="content w-full flex flex-col justify-center lg:justify-start items-center bg-[#dde6ed] select-none dark:bg-[#001321] relative"
+    >
+      <div
+        class="container-fluid w-full lg:w-[90%] flex flex-col justify-center items-center gap-[80px] lg:gap-0"
+      >
+        <div
+          class="w-full h-[100px] lg:h-[200px] flex justify-center items-center mt-7 lg:mt-0"
+        >
+          <div
+            class="blog-title font-MorabbaBold flex justify-center items-center gap-2"
+          >
+            <h2 class="text-4xl lg:text-6xl text-[#1abac6]">
+              < / >
+              <span
+                class="typed-text-contact text-4xl lg:text-6xl text-[#3F3F46] dark:text-white"
+              ></span>
+              <span class="cursor-contact">&nbsp;</span>
+            </h2>
+          </div>
+        </div>
+        <div
+          class="w-full rounded-2xl flex flex-col lg:flex-row justify-evenly items-center px-5 relative gap-[70px] lg:gap-0 overflow-hidden"
+        >
+          <div
+            class="w-full lg:w-[33%] lg:h-[600px] flex flex-col justify-start items-start px-8 py-5 gap-3 overflow-hidden font-MorabbaRegular rounded-2xl bg-[#164863] text-white order-2 lg:order-1"
+          >
+            <p class="text-lg">
+              - چیزی که دنبالش هستید را پیدا نمیکنید؟ مشکلی نیست ، ما کمکتون
+              میکنیم
+            </p>
+            <div
+              class="contact-name w-full h-[50px] bg-[#F6F5F5] dark:bg-[#232D3F] rounded-lg flex items-center pr-2 mt-4"
+            >
+              <div
+                class="circle w-[40px] h-[35px] bg-white dark:bg-[#001321] rounded-full flex items-center justify-center"
+              >
+                <span id="mg" class="fa-solid fa-user text-[#A4A4A4]"></span>
+              </div>
+              <input
+                type="text"
+                class="rounded-full w-full h-full text-sm pr-3 dark:text-white bg-[#F6F5F5] dark:bg-[#232D3F] outline-none"
+                placeholder="نام و نام‌خانوادگی"
+                id="input"
+              />
+            </div>
+
+            <div
+              class="contact-email w-full h-[50px] bg-[#F6F5F5] dark:bg-[#232D3F] rounded-lg flex items-center pr-2"
+            >
+              <div
+                class="circle w-[40px] h-[35px] bg-white dark:bg-[#001321] rounded-full flex items-center justify-center"
+              >
+                <span
+                  id="mg"
+                  class="fa-solid fa-mail-bulk text-[#A4A4A4]"
+                ></span>
+              </div>
+              <input
+                type="email"
+                class="rounded-full w-full h-full text-sm pr-3 dark:text-white bg-[#F6F5F5] dark:bg-[#232D3F] outline-none"
+                placeholder="ایمیل"
+                id="input"
+              />
+            </div>
+
+            <div
+              class="contact-phone w-full h-[50px] bg-[#F6F5F5] dark:bg-[#232D3F] rounded-lg flex items-center pr-2"
+            >
+              <div
+                class="circle w-[40px] h-[35px] bg-white dark:bg-[#001321] rounded-full flex items-center justify-center"
+              >
+                <span id="mg" class="fa-solid fa-phone text-[#A4A4A4]"></span>
+              </div>
+              <input
+                type="text"
+                class="rounded-full w-full h-full text-sm pr-3 dark:text-white bg-[#F6F5F5] dark:bg-[#232D3F] outline-none"
+                placeholder="شماره‌همراه"
+                id="input"
+              />
+            </div>
+
+            <div
+              class="contact-subject w-full h-[50px] bg-[#F6F5F5] dark:bg-[#232D3F] rounded-lg flex items-center pr-2"
+            >
+              <div
+                class="circle w-[40px] h-[35px] bg-white dark:bg-[#001321] rounded-full flex items-center justify-center"
+              >
+                <span
+                  id="mg"
+                  class="fa-solid fa-paperclip text-[#A4A4A4]"
+                ></span>
+              </div>
+              <input
+                type="text"
+                class="rounded-full w-full h-full text-sm pr-3 dark:text-white bg-[#F6F5F5] dark:bg-[#232D3F] outline-none"
+                placeholder="موضوع"
+                id="input"
+              />
+            </div>
+
+            <div
+              class="contact-textarea w-full h-[150px] bg-[#F6F5F5] dark:bg-[#232D3F] rounded-lg flex items-center justify-center px-2"
+            >
+              <textarea
+                name="contact-textarea"
+                id=""
+                cols="80"
+                rows="7"
+                class="dark:text-white bg-[#F6F5F5] dark:bg-[#232D3F] outline-none w-full h-[140px] p-3 font-MorabbaRegular darktext-white overflow-hidden resize-none"
+                placeholder="پیام شما..."
+              ></textarea>
+            </div>
+
+            <button
+              id="contact-btn"
+              class="w-[30%] h-[50px] bg-[#232D3F] dark:text-white dark:bg-[#232D3F] flex justify-center items-center rounded-lg font-MorabbaRegular cursor-pointer hover:w-full transition-all duration-300 ease-linear hover:bg-[#1abac6] dark:hover:bg-[#1abac6] text-xl text-white mt-2"
+            >
+              ثبت
+            </button>
+          </div>
+
+          <div
+            id="contact-img"
+            class="w-full lg:w-[33%] scale-[1.6] flex justify-center items-center order-1 lg:order-2"
+          ></div>
+
+          <div
+            class="w-full lg:w-[33%] lg:h-[600px] flex flex-col justify-start items-center order-3 mb-10 lg:mb-0"
+          >
+            <div
+              class="w-full h-full rounded-2xl bg-[#164863] text-white flex flex-col justify-start items-start px-8 gap-3 overflow-hidden relative"
+            >
+              <p class="font font-MorabbaBold text-3xl mt-8">اطلاعات تماس</p>
+              <p class="font-MorabbaRegular">
+                به محظ اینکه شما فرم را پر کنید ، تیم ما ظرف
+                <span class="font-iranSansNum">24</span> ساعت پاسخ شما را خواهد
+                داد.
+              </p>
+              <p
+                class="font-iranSansNum flex justify-center items-center gap-2 text-sm"
+              >
+                <span class="fa-regular fa-phone-alt text-xl"></span>6748 556
+                912 98+
+              </p>
+              <p
+                class="font-poppins flex justify-center items-center gap-2 text-sm"
+              >
+                <span class="fa-regular fa-envelope text-xl"></span
+                >pouyahrt@gmail.com
+              </p>
+              <p
+                class="font-MorabbaRegular flex justify-center items-center gap-2"
+              >
+                <span class="fa-regular fa-location-dot text-xl"></span>آدرس‌ما
+                :
+              </p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12959.384212998844!2d51.3736575!3d35.7054058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e01424e54d421%3A0x866a40ca31082db4!2z2KLaqdin2K_ZhduMINis2YTZiNmH!5e0!3m2!1sen!2s!4v1701510434709!5m2!1sen!2s"
+                class="w-full h-[200px] rounded-2xl border-none mb-5 lg:mb-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              <div
+                id="contact-phone"
+                class="hidden lg:flex justify-center items-center scale-[0.7] absolute lg:bottom-[-90px] xl:bottom-[-160px] left-0"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <!-- container -->
+      </div>
+    </div>
+    <!-- END CONTENT -->
+    <!-- start footer -->
+    <footer>
+      <div
+        class="footer w-[full] flex flex-col items-cneter justify-start bg-white relative select-none dark:bg-[#001321] overflow-hidden"
+      >
+        <div class="divider w-full h-[100px] flex items-center justify-center">
+          <div
+            class="w-full h-[0.5px] bg-slate-300 z-[999] hidden lg:block"
+          ></div>
+          <div
+            class="social lg:w-[400px] lg:h-full ml-[20px] mr-[20px] flex items-center justify-evenly gap-[20px] lg:gap-0"
+          >
+            <a
+              href="#"
+              class="flex items-center justify-center hover:text-[#ff6464] transition-all duration-100 ease-linear"
+            >
+              <span
+                class="fa-brands fa-instagram text-lg dark:text-slate-300 dark:hover:text-[#ff6464]"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-center hover:text-[#0088cc] transition-all duration-100 ease-linear"
+            >
+              <span
+                class="fa-brands fa-telegram text-lg dark:text-slate-300 dark:hover:text-[#0088cc]"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-center hover:text-[#c4302b] transition-all duration-100 ease-linear"
+            >
+              <span
+                class="fa-brands fa-youtube text-lg dark:text-slate-300 dark:hover:text-[#c4302b]"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-center hover:text-[#25D366] transition-all duration-100 ease-linear"
+            >
+              <span
+                class="fa-brands fa-whatsapp text-lg dark:text-slate-300 dark:hover:text-[#25D366]"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center justify-center hover:text-[#1DA1F2] transition-all duration-100 ease-linear"
+            >
+              <span
+                class="fa-brands fa-twitter text-lg dark:text-slate-300 dark:hover:text-[#1DA1F2]"
+              ></span>
+            </a>
+            <a href="#" class="flex items-center justify-center">
+              <img
+                src="./media/Footer/aparat.png"
+                class="aparat-light !object-contain !w-[25px] !h-[25px] !mb-1"
+              />
+              <img
+                src="./media/Footer/aparat-darkmode.png"
+                class="aparat-dark !object-contain !w-[25px] !h-[25px] !mb-1 !hidden"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-end relative"
+        >
+          <div
+            class="w-[350px] h-[320px] bg-slate-50 rounded-2xl absolute top-[-70px] right-[65px] z-[999] drop-shadow-md xl:flex flex-col items-center justify-evenly dark:bg-[#232D3F] overflow-hidden hidden"
+          >
+            <img
+              id="footer-logo-desktop"
+              src="./media/Logo/Artboard 7.png"
+              class="object-contain px-5 cursor-pointer transition-all duration-300 ease-linear"
+            />
+
+            <img
+              id="footer-logo2-desktop"
+              src="./media/Logo/Artboard 8.png"
+              class="object-contain px-5 cursor-pointer hidden"
+            />
+
+            <p
+              id="footer-p1-desktop"
+              class="font-MorabbaRegular px-8 text-justify text-[#464646] dark:text-slate-300 transition-all duration-300 ease-linear"
+            >
+              آکادمی جلوه یک اکادمی خصوصی آموزش برنامه نویسی هست که با هدف تحویل
+              نیروی متخصص بر پایه تولید محتوای غیرسطحی فعالیت میکند.
+            </p>
+            <p
+              id="footer-p2-desktop"
+              class="font-MorabbaRegular px-8 text-[#464646] dark:text-slate-300 w-full text-center hidden"
+            >
+              طراحی و پیاده سازی سایت خود را به ما بسپارید
+              <a
+                href="#"
+                class="w-[120px] h-[40px] bg-[#164863] rounded-xl flex items-center justify-center font-MorabbaRegular text-sm shadow-md gap-2 hover:bg-transparent hover:border-2 hover:border-[#164863] text-white transition-all duration-200 ease-linear mx-auto mt-3 hover:text-black dark:hover:text-white hover:w-[150px]"
+              >
+                برو به سایت
+                <span class="fa-light fa-angle-left"></span>
+              </a>
+            </p>
+          </div>
+          <div class="flex justify-center items-center">
+            <div
+              class="w-[150px] lg:w-[300px] lg:h-[200px] flex flex-col gap-3 lg:gap-5 items-start justify-center mr-[60px] lg:mr-[30px]"
+            >
+              <p
+                class="font-MorabbaBold flex items-center justify-center text-sm lg:text-lg text-[#535353] dark:text-white"
+              >
+                دسترسی سریع
+              </p>
+
+              <a
+                href="#"
+                class="font-MorabbaRegular text-[#464646] mt-2 dark:text-slate-300 hover:text-[#1abac6] dark:hover:text-[#1abac6] text-xs lg:text-[16px]"
+                >خانه</a
+              >
+              <a
+                href="#"
+                class="font-MorabbaRegular text-[#464646] dark:text-slate-300 hover:text-[#1abac6] dark:hover:text-[#1abac6] text-xs lg:text-[16px]"
+                >دوره‌ها</a
+              >
+              <a
+                href="#"
+                class="font-MorabbaRegular text-[#464646] dark:text-slate-300 hover:text-[#1abac6] dark:hover:text-[#1abac6] text-xs lg:text-[16px]"
+                >مقالات</a
+              >
+              <a
+                href="#"
+                class="font-MorabbaRegular text-[#464646] dark:text-slate-300 hover:text-[#1abac6] dark:hover:text-[#1abac6] text-xs lg:text-[16px]"
+                >تماس‌با‌ما</a
+              >
+            </div>
+
+            <div
+              class="w-[150px] lg:w-[300px] lg:h-[200px] flex flex-col gap-3 lg:gap-5 items-start justify-center"
+            >
+              <p
+                class="font-MorabbaBold flex items-center justify-center text-sm lg:text-lg text-[#535353] dark:text-white"
+              >
+                لینک‌های مفید
+              </p>
+              <a
+                href="#"
+                class="font-MorabbaRegular flex items-center justify-center gap-1 text-[#464646] mt-2 dark:text-slate-300 dark:hover:text-[#1abac6] hover:text-[#1abac6] text-xs lg:text-[16px]"
+                >آموزش <span class="font-poppins">HTML</span></a
+              >
+              <a
+                href="#"
+                class="font-MorabbaRegular flex items-center justify-center gap-1 text-[#464646] dark:text-slate-300 dark:hover:text-[#1abac6] hover:text-[#1abac6] text-xs lg:text-[16px]"
+                >آموزش <span class="font-poppins">CSS</span></a
+              >
+              <a
+                href="#"
+                class="font-MorabbaRegular flex items-center justify-center gap-1 text-[#464646] dark:text-slate-300 dark:hover:text-[#1abac6] hover:text-[#1abac6] text-xs lg:text-[16px]"
+                >آموزش <span class="font-poppins">JS</span></a
+              >
+              <a
+                href="#"
+                class="font-MorabbaRegular flex items-center justify-center gap-1 text-[#464646] dark:text-slate-300 dark:hover:text-[#1abac6] hover:text-[#1abac6] text-xs lg:text-[16px]"
+                >آموزش <span class="font-poppins">SEO</span></a
+              >
+            </div>
+          </div>
+
+          <div
+            class="w-[300px] h-[200px] lg:ml-[65px] flex flex-col gap-3 items-center justify-center"
+          >
+            <div class="swiper mySwiper4 !relative !mt-5">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center justify-center">
+                  <a href="#">
+                    <img
+                      src="./media/Footer/enamadLogo.png"
+                      class="!object-contain !py-4"
+                    />
+                  </a>
+                </div>
+
+                <div class="swiper-slide flex items-center justify-center">
+                  <a href="#">
+                    <img
+                      src="./media/Footer/samandehi_logo.png"
+                      class="!object-contain !py-4"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination dark:bg-[#232D3F]"></div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full h-[0.5px] bg-slate-300 mt-[30px]"></div>
+        <div
+          class="w-full h-[80px] flex flex-col lg:flex-row justify-center items-center lg:justify-between lg:px-8 gap-1 lg:gap-0"
+        >
+          <p
+            class="font-MorabbaRegular text-xs lg:text-[16px] text-[#6d6d6d] dark:text-slate-300"
+          >
+            ساخته شده در آکادمی جلوه
+          </p>
+          <p
+            class="font-poppins text-[#6d6d6d] text-[10px] lg:text-[16px] dark:text-slate-300"
+          >
+            .Copyright © 2023 JelvehAcademy. All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <!-- JS SRC -->
+    <script src="./lottie-web/build/player/lottie.min.js"></script>
+    <script src="./flowbite/dist/flowbite.min.js"></script>
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

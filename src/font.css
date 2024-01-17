@@ -1,0 +1,36 @@
+@font-face {
+  font-family: iranSans;
+  src: url(../media/Fonts/IRANSansX-Regular.woff);
+}
+@font-face {
+  font-family: iranSansBold;
+  src: url(../media/Fonts/IRANSansX-Bold.woff);
+}
+@font-face {
+  font-family: iranSansNum;
+  src: url(../media/Fonts/IRANSansNum-Regular.woff);
+}
+@font-face {
+  font-family: iranSansNumBold;
+  src: url(../media/Fonts/IRANSansNum-Bold.woff);
+}
+@font-face {
+  font-family: poppins;
+  src: url(../media/Fonts/Poppins-Regular.woff);
+}
+@font-face {
+  font-family: poppinsBold;
+  src: url(../media/Fonts/Poppins-Bold.woff);
+}
+@font-face {
+  font-family: MorabbaRegular;
+  src: url(../media/Fonts/Morabba-Regular.woff);
+}
+@font-face {
+  font-family: MorabbaBold;
+  src: url(../media/Fonts/Morabba-Bold.woff);
+}
+@font-face {
+  font-family: MorabbaExtraBold;
+  src: url(../media/Fonts/Morabba-ExtraBold.woff);
+}
