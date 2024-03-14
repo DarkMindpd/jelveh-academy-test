@@ -656,10 +656,6 @@ video {
   position: sticky;
 }
 
-.bottom-\[-160px\] {
-  bottom: -160px;
-}
-
 .bottom-\[10px\] {
   bottom: 10px;
 }
@@ -820,6 +816,10 @@ video {
 
 .mb-1 {
   margin-bottom: 0.25rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mb-2 {
@@ -996,14 +996,6 @@ video {
 
 .mt-\[90px\] {
   margin-top: 90px;
-}
-
-.mb-9 {
-  margin-bottom: 2.25rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
 }
 
 .\!flex {
@@ -1831,10 +1823,6 @@ video {
   padding-bottom: 1rem;
 }
 
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
-
 .pb-\[50px\] {
   padding-bottom: 50px;
 }
@@ -1885,10 +1873,6 @@ video {
 
 .pt-\[20px\] {
   padding-top: 20px;
-}
-
-.pb-9 {
-  padding-bottom: 2.25rem;
 }
 
 .text-center {
@@ -2547,10 +2531,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:bottom-\[-50px\] {
-    bottom: -50px;
-  }
-
   .lg\:bottom-\[-90px\] {
     bottom: -90px;
   }
@@ -2627,6 +2607,14 @@ video {
 
   .lg\:mt-8 {
     margin-top: 2rem;
+  }
+
+  .lg\:mb-9 {
+    margin-bottom: 2.25rem;
+  }
+
+  .lg\:mb-20 {
+    margin-bottom: 5rem;
   }
 
   .lg\:\!block {
@@ -2961,10 +2949,6 @@ video {
   .xl\:my-4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
-  }
-
-  .xl\:mb-0 {
-    margin-bottom: 0px;
   }
 
   .xl\:flex {
