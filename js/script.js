@@ -1161,7 +1161,7 @@ var swiper = new Swiper(".mySwiper3", {
 
 var animationAboutSlide1 = lottie.loadAnimation({
   container: document.getElementById("about-slide1-img"),
-  path: `../media/AboutSwiper/AboutSwiper-Slide1.json`,
+  path: `https://raw.githubusercontent.com/DarkMindpd/jelveh-academy-test/main/media/AboutSwiper/AboutSwiper-Slide1.json`,
   render: "svg",
   loop: true,
   autoplay: true,
@@ -1170,7 +1170,7 @@ var animationAboutSlide1 = lottie.loadAnimation({
 
 var animationAboutSlide2 = lottie.loadAnimation({
   container: document.getElementById("about-slide2-img"),
-  path: `../media/AboutSwiper/AboutSwiper-Slide2.json`,
+  path: `https://raw.githubusercontent.com/DarkMindpd/jelveh-academy-test/main/media/AboutSwiper/AboutSwiper-Slide2.json`,
   render: "svg",
   loop: true,
   autoplay: true,
@@ -1178,7 +1178,7 @@ var animationAboutSlide2 = lottie.loadAnimation({
 });
 var animationAboutSlide3 = lottie.loadAnimation({
   container: document.getElementById("about-slide3-img"),
-  path: `../media/AboutSwiper/AboutSwiper-Slide3.json`,
+  path: `https://raw.githubusercontent.com/DarkMindpd/jelveh-academy-test/main/media/AboutSwiper/AboutSwiper-Slide3.json`,
   render: "svg",
   loop: true,
   autoplay: true,
@@ -1186,7 +1186,7 @@ var animationAboutSlide3 = lottie.loadAnimation({
 });
 var animationAboutSlide4 = lottie.loadAnimation({
   container: document.getElementById("about-slide4-img"),
-  path: `../media/AboutSwiper/AboutSwiper-Slide4.json`,
+  path: `https://raw.githubusercontent.com/DarkMindpd/jelveh-academy-test/main/media/AboutSwiper/AboutSwiper-Slide4.json`,
   render: "svg",
   loop: true,
   autoplay: true,
@@ -1306,7 +1306,7 @@ themeToggleBtn.addEventListener("click", function () {
 // inturduce json animation
 var animationLight = lottie.loadAnimation({
   container: document.getElementById("FS-image"),
-  path: `../media/FirstSection/Animation - inturduce.json`,
+  path: `https://raw.githubusercontent.com/DarkMindpd/jelveh-academy-test/main/media/FirstSection/Animation%20-%20inturduce.json`,
   render: "svg",
   loop: true,
   autoplay: true,
@@ -1315,7 +1315,7 @@ var animationLight = lottie.loadAnimation({
 
 var animationDark = lottie.loadAnimation({
   container: document.getElementById("FS-image-dark"),
-  path: `../media/FirstSection/Animation - inturduce - dark.json`,
+  path: `https://raw.githubusercontent.com/DarkMindpd/jelveh-academy-test/main/media/FirstSection/Animation%20-%20inturduce%20-%20dark.json`,
   render: "svg",
   loop: true,
   autoplay: true,
@@ -1326,7 +1326,7 @@ var animationDark = lottie.loadAnimation({
 
 var animationContact = lottie.loadAnimation({
   container: document.getElementById("contact-img"),
-  path: `../media/Contact/Animation - 1701511852584.json`,
+  path: `https://raw.githubusercontent.com/DarkMindpd/jelveh-academy-test/main/media/Contact/Animation%20-%201701511852584.json`,
   render: "svg",
   loop: true,
   autoplay: true,
@@ -1335,7 +1335,7 @@ var animationContact = lottie.loadAnimation({
 
 var animationContact = lottie.loadAnimation({
   container: document.getElementById("contact-phone"),
-  path: `../media/Contact/Animation - email.json`,
+  path: `https://raw.githubusercontent.com/DarkMindpd/jelveh-academy-test/main/media/Contact/Animation%20-%20email.json`,
   render: "svg",
   loop: true,
   autoplay: true,
